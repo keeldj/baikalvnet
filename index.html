@@ -2,119 +2,123 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Baikal VNet — защищённый цифровой сервис</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family:'Inter',sans-serif;
       background: radial-gradient(ellipse at top, #101010, #050505);
-      color: #ffffff;
-      overflow-x: hidden;
+      color:#fff;
+      overflow-x:hidden;
     }
     header {
-      text-align: center;
-      padding: 80px 20px 60px;
+      text-align:center;
+      padding:80px 20px 60px;
     }
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #ffffff;
+      font-size:3rem;
+      font-weight:700;
+      line-height:1.2;
     }
     header p {
-      font-size: 1.2rem;
-      color: #cccccc;
-      margin: 20px 0 40px;
+      margin:20px 0 40px;
+      font-size:1.1rem;
+      color:#ccc;
+      max-width:600px;
+      margin-left:auto; margin-right:auto;
     }
     .btn-primary {
-      background-color: #7b5dfc;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: none;
-      text-decoration: none;
-      transition: background 0.3s;
+      background-color:#7b5dfc;
+      color:#fff;
+      padding:15px 30px;
+      font-size:1rem;
+      border-radius:8px;
+      text-decoration:none;
+      display:inline-block;
+      transition:background 0.3s;
     }
     .btn-primary:hover {
-      background-color: #5a3ee0;
+      background-color:#5a3ee0;
     }
     .globe {
-      width: 100%;
-      max-width: 600px;
-      margin: 60px auto 0;
-      display: block;
-      opacity: 0.8;
+      display:block;
+      width:100%;
+      max-width:600px;
+      margin:60px auto;
+      opacity:0.8;
     }
     .features {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #111111;
+      text-align:center;
+      padding:60px 20px;
+      background:#111;
     }
     .features h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ffffff;
+      font-size:2rem;
+      margin-bottom:16px;
     }
     .features p {
-      font-size: 1rem;
-      color: #cccccc;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #777;
+      font-size:1rem;
+      color:#ccc;
+      max-width:700px;
+      margin:0 auto;
     }
     .tariff-section {
-      background-color: #0d0d0d;
-      padding: 60px 20px;
+      background:#0d0d0d;
+      padding:60px 20px;
     }
     .tariff-section h2 {
-      text-align: center;
-      color: #fff;
-      margin-bottom: 40px;
-      font-size: 2rem;
+      text-align:center;
+      color:#fff;
+      margin-bottom:40px;
+      font-size:2rem;
     }
     .tariffs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+      display:flex;
+      flex-wrap:wrap;
+      gap:30px;
+      justify-content:center;
     }
     .tariff {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 30px;
-      width: 280px;
-      text-align: center;
-      color: #fff;
+      background:#1a1a1a;
+      border:1px solid #333;
+      border-radius:12px;
+      padding:30px;
+      width:280px;
+      text-align:center;
     }
     .tariff h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size:1.5rem;
+      margin-bottom:8px;
     }
     .tariff p {
-      color: #aaa;
-      margin-bottom: 10px;
+      color:#aaa;
+      margin-bottom:12px;
     }
+    footer {
+      text-align:center;
+      padding:30px 20px;
+      font-size:0.9rem;
+      color:#777;
+    }
+    a { text-decoration:none; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Browse privately<br>with Baikal VNet</h1>
-  <p>Use a secure digital tunnel for stable and private internet access. Simple, anonymous and fast.</p>
-  <a href="#" class="btn-primary">Подключиться за 299 ₽</a>
+  <h1>Приватный серфинг с Baikal VNet</h1>
+  <p>Надёжный цифровой туннель для стабильного и защищённого доступа в интернет. Просто, анонимно и быстро.</p>
+  <a href="#" class="btn-primary">Подключиться за 299 ₽</a>
 </header>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BlankMap-World.svg/1200px-BlankMap-World.svg.png" alt="globe" class="globe">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BlankMap-World.svg/1200px-BlankMap-World.svg.png"
+     alt="Глобус" class="globe">
 
 <section class="features">
   <h2>Надёжное соединение, где бы вы ни были</h2>
-  <p>Наша технология безопасной передачи данных защитит ваши действия в публичных Wi-Fi сетях и обеспечит стабильное подключение.</p>
+  <p>Наша технология защищённой передачи данных оберегает ваши действия в публичных Wi‑Fi сетях и обеспечивает стабильное подключение даже при высокой нагрузке.</p>
 </section>
 
 <section class="tariff-section">
