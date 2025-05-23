@@ -51,20 +51,51 @@
     .btn-primary:hover {
       background-color: #5a3ee0;
     }
-    .globe {
-      display: block;
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    .plan {
+      background-color: #202020;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+    }
+    .plan h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .plan p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .plan .btn-primary {
       width: 100%;
-      max-width: 700px;
-      margin: 60px auto;
-      opacity: 0.9;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Baikal VNet — защищённый цифровой сервис</h1>
-    <p>Оформите подписку на защищённый VPN-сервис</p>
-    <a href="payment.html" class="btn-primary">Оплатить</a>
+    <p>Оформите подписку на защищённый сервис, который обеспечивает высокую безопасность и конфиденциальность ваших данных.</p>
+
+    <!-- Кнопки тарифов -->
+    <div class="plans">
+      <div class="plan">
+        <h3>Базовый</h3>
+        <p>Доступ к основным услугам с ограничениями по скорости.</p>
+        <a href="payment.html" class="btn-primary">Оплатить</a>
+      </div>
+      <div class="plan">
+        <h3>Премиум</h3>
+        <p>Быстрый и безопасный доступ без ограничений.</p>
+        <a href="payment.html" class="btn-primary">Оплатить</a>
+      </div>
+    </div>
   </header>
 </body>
 </html>
