@@ -5,12 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #4caf50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the site!</h1>
-    <a href="register.html">Register</a> | 
-    <a href="profile.html" id="profile-link" style="display:none;">Go to Profile</a>
-
+    <div class="header">
+        <h1>Welcome to the site!</h1>
+    </div>
+    <div class="content">
+        <a href="register.html">Register</a>
+        <a href="profile.html" id="profile-link" style="display:none;">Go to Profile</a>
+    </div>
     <script>
         // Check if user is logged in by checking localStorage
         if (localStorage.getItem('username')) {
