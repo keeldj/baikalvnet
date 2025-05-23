@@ -1,66 +1,156 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #4caf50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .content {
-            margin-top: 20px;
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            background-color: #4caf50;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 10px;
-        }
-        a:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baikal VNet — защищённый цифровой сервис</title>
+  <meta name="description" content="Baikal VNet — защищённый сервис для конфиденциальности ваших данных.">
+  <meta name="keywords" content="Baikal VNet, безопасность, интернет, защита данных">
+  <meta property="og:title" content="Baikal VNet — защищённый цифровой сервис">
+  <meta property="og:description" content="Оформите подписку на безопасный сервис для конфиденциальности.">
+  <meta property="og:image" content="image.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #101010;
+      color: #fff;
+      overflow-x: hidden;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      padding: 80px 20px 60px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    .btn-primary {
+      background-color: #7b5dfc;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #5a3ee0;
+      transform: scale(1.1);
+    }
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    .plan {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+    }
+    .plan h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .plan p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .plan .btn-primary {
+      width: 100%;
+    }
+    .globe {
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      margin: 60px auto;
+      opacity: 0.9;
+    }
+    .footer {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 50px;
+      padding: 10px 0;
+      background-color: #101010;
+    }
+    .footer a {
+      color: #7b5dfc;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer span {
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .plans {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .plan {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to the site!</h1>
-    </div>
-    <div class="content">
-        <a href="register.html">Register</a>
-        <button id="login-button">Login</button>
-        <a href="profile.html" id="profile-link" style="display:none;">Go to Profile</a>
-    </div>
+  <header>
+    <h1>Baikal VNet — защищённый цифровой сервис</h1>
+    <p>Оформите подписку на защищённый сервис, который обеспечивает высокую безопасность и конфиденциальность ваших данных.</p>
+    
+    <!-- Картинка глобуса -->
+    <img src="globe.png" class="globe" alt="Глобус" loading="lazy">
 
-    <script>
-        // Check if user is logged in by checking localStorage
-        if (localStorage.getItem('username')) {
-            document.getElementById('profile-link').style.display = 'inline';
-        }
-
-        // Login functionality
-        document.getElementById('login-button').addEventListener('click', function() {
-            if (localStorage.getItem('username')) {
-                window.location.href = 'profile.html';
-            } else {
-                alert('Please register first!');
-                window.location.href = 'register.html';
-            }
-        });
-    </script>
+    <!-- Кнопки тарифов -->
+    <div class="plans">
+      <div class="plan">
+        <h3>30 дней</h3>
+        <p>Доступ на 30 дней с полным функционалом.</p>
+        <a href="payment.html" class="btn-primary">Оплатить</a>
+      </div>
+      <div class="plan">
+        <h3>60 дней</h3>
+        <p>Доступ на 60 дней с полным функционалом.</p>
+        <a href="payment.html" class="btn-primary">Оплатить</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Нижний футер с правильными ссылками на PDF -->
+  <div class="footer">
+    <a href="offer.html">Тарифы</a> | 
+    <a href="privacy.html">Политика конфиденциальности</a> | 
+    <a href="/mnt/data/Polityka_Konfidenzialnosti_reportlab.pdf" target="_blank">Политика конфиденциальности (PDF)</a> | 
+    <a href="/mnt/data/Publicznaya_Oferta_reportlab.pdf" target="_blank">Публичная оферта (PDF)</a> | 
+    <span>&copy; 2025 Baikal VNet. Все права защищены.</span>
+  </div>
 </body>
 </html>
