@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+</head>
+<body>
+    <h1>Your Profile</h1>
+    <div id="user-info">
+        <p>Username: <span id="username-info"></span></p>
+        <p>Email: <span id="email-info"></span></p>
+    </div>
+    <button id="logout-button">Logout</button>
+
+    <script>
+        // Get user data from localStorage
+        const username = localStorage.getItem('username');
+        const email = localStorage.getItem('email');
+
+        if (!username || !email) {
+            alert('You need to register first!');
+            window.location.href = 'register.html';
+        } else {
+            document.getElementById('username-info').textContent = username;
+            document.getElementById('email-info').textContent = email;
+        }
+
+        // Logout functionality
+        document.getElementById('logout-button').addEventListener('click', function() {
+            localStorage.removeItem('username');
+            localStorage.removeItem('email');
+            localStorage.removeItem('password');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

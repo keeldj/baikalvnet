@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form id="register-form">
+        <label for="username">Username: </label>
+        <input type="text" id="username" required><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" required><br>
+        <label for="password">Password: </label>
+        <input type="password" id="password" required><br>
+        <button type="submit">Register</button>
+    </form>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Save data to localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            alert('Registration successful!');
+            window.location.href = 'profile.html';
+        });
+    </script>
+</body>
+</html>
