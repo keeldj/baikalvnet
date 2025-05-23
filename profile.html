@@ -59,21 +59,52 @@
         #logout-button:hover {
             background-color: #c0392b;
         }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h3 {
+            color: #34495e;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
             <h3>Dashboard</h3>
-            <a href="#">Overview</a>
-            <a href="#">Settings</a>
-            <a href="#">Logs</a>
-            <a href="#">Activity</a>
+            <a href="#overview">Overview</a>
+            <a href="#settings">Settings</a>
+            <a href="#logs">Logs</a>
+            <a href="#activity">Activity</a>
         </div>
         <div class="profile-content">
             <h2>Your Profile</h2>
             <p>Username: <span id="username-info"></span></p>
             <p>Email: <span id="email-info"></span></p>
+
+            <div id="overview" class="section">
+                <h3>Overview</h3>
+                <p>Status: Active</p>
+                <p>Last login: <span id="last-login">Today</span></p>
+            </div>
+
+            <div id="settings" class="section">
+                <h3>Settings</h3>
+                <p><strong>Change Password</strong>: <a href="#">Click here to change your password</a></p>
+            </div>
+
+            <div id="logs" class="section">
+                <h3>Logs</h3>
+                <ul>
+                    <li>Login: Today at 2:00 PM</li>
+                    <li>Password change: Last month</li>
+                </ul>
+            </div>
+
+            <div id="activity" class="section">
+                <h3>Activity</h3>
+                <p>Last activity: Viewing profile</p>
+            </div>
+
             <button id="logout-button">Logout</button>
         </div>
     </div>
