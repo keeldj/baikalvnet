@@ -18,6 +18,8 @@
     }
     body {
       font-family: 'Inter', sans-serif;
+      background: url('https://happyhouse.guru/uploads/posts/2023-03/1678287783_happyhouse-guru-p-chernie-oboi-bez-nichego-krasivo-8.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       overflow-x: hidden;
       text-align: center;
@@ -25,7 +27,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #101010;
+      transition: background-color 0.3s ease-in-out;
     }
     header {
       padding: 80px 20px 60px;
@@ -35,6 +37,7 @@
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
     }
     header p {
       font-size: 1.1rem;
@@ -51,10 +54,11 @@
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
     .btn-primary:hover {
       background-color: #5a3ee0;
+      transform: scale(1.1);
     }
     .plans {
       display: flex;
@@ -88,6 +92,27 @@
       margin: 60px auto;
       opacity: 0.9;
     }
+    .social-links {
+      margin-top: 50px;
+    }
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .plans {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .plan {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -96,7 +121,7 @@
     <p>Оформите подписку на защищённый сервис, который обеспечивает высокую безопасность и конфиденциальность ваших данных.</p>
     
     <!-- Картинка глобуса -->
-    <img src="globe.png" class="globe" alt="Глобус">
+    <img src="globe.png" class="globe" alt="Глобус" loading="lazy">
 
     <!-- Кнопки тарифов -->
     <div class="plans">
@@ -111,6 +136,36 @@
         <a href="payment.html" class="btn-primary">Оплатить</a>
       </div>
     </div>
+    
+    <!-- Социальные сети -->
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+    
+    <!-- Модальное окно -->
+    <button class="btn-primary" onclick="openModal()">Подробнее</button>
+
+    <div id="modal" style="display:none;">
+      <div class="modal-content">
+        <p>Дополнительная информация...</p>
+        <button onclick="closeModal()">Закрыть</button>
+      </div>
+    </div>
   </header>
+  
+  <!-- Капча -->
+  <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
