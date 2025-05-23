@@ -18,16 +18,15 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: url('https://happyhouse.guru/uploads/posts/2023-03/1678287783_happyhouse-guru-p-chernie-oboi-bez-nichego-krasivo-8.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #101010;
       color: #fff;
       overflow-x: hidden;
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      transition: background-color 0.3s ease-in-out;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       padding: 80px 20px 60px;
@@ -92,12 +91,11 @@
       opacity: 0.9;
     }
     .footer {
-      margin-top: 50px;
       font-size: 0.9rem;
       color: #ccc;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
+      margin-top: 50px;
+      padding: 10px 0;
+      background-color: #101010;
     }
     .footer a {
       color: #7b5dfc;
@@ -105,6 +103,9 @@
     }
     .footer a:hover {
       text-decoration: underline;
+    }
+    .footer span {
+      color: #fff;
     }
     @media (max-width: 768px) {
       header h1 {
@@ -145,9 +146,10 @@
   
   <!-- Нижний футер с ссылками на offer.html, privacy.html и отчет о прозрачности -->
   <div class="footer">
-    <a href="offer.html">Тарифы</a>
-    <a href="privacy.html">Политика конфиденциальности</a>
-    <a href="#">Отчет о прозрачности</a> | <span>&copy; 2025 Baikal VNet. Все права защищены.</span>
+    <a href="offer.html">Тарифы</a> | 
+    <a href="privacy.html">Политика конфиденциальности</a> | 
+    <a href="#">Отчет о прозрачности</a> | 
+    <span>&copy; 2025 Baikal VNet. Все права защищены.</span>
   </div>
 </body>
 </html>
